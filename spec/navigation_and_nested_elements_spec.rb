@@ -4,7 +4,7 @@ RSpec.describe 'Navigation and Nested Elements' do
   end
 
   it 'has a top-level <html> tag to enclose the document' do
-    expect(parsed_html.child.name).to eq('html'), "All well-structured HTML documents need an <html> tag"
+    expect(html_file_contents).to include('<html>'), "All well-structured HTML documents need an <html> tag"
 
     expect(html_file_contents).to include('</html>'), "Don't forget the closing </html> tag!"
   end
